@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Subject Schedule</title>
+    <style>
+        body{
+    background-image: linear-gradient(rgb(206, 10, 124), rgb(8, 206, 84), rgb(82, 82, 141));
+   
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+#myDIV{
+ width: min-content;
+ height: min-content;
+ background: gold;
+ animation: mymove 5s infinite;
+}
+@keyframes mymove{
+    from {background-color: rgb(1, 39, 39);}
+    to{background-color: bisque;}
+}
+
+    </style>
+    
+</head>
+<body>
+    <h2>Schedule</h2>
+    <form id="form1">
+        <label for="subject">Subject:</label><br>
+        <input type="text" id="subject" name="subject"><br>
+        <label for="day">Day:</label><br>
+        <select id="day" name="day" required>
+                <option value="monday">Monday</option>
+                <option value="tuesday">Tuesday</option>
+                <option value="wednesday">Wednesday</option>
+                <option value="thursday">Thursday</option>
+                <option value="friday">Friday</option>
+                <option value="saturday">Saturday</option>
+                <option value="sunday">Sunday</option>
+        </select>
+        <label for="time">Time:</label><br>
+        <input type="text" id="time" name="time"><br>
+        <label for="room">Room:</label><br>
+        <input type="text" id="room" name="room"><br>
+        <label for="instructor">Instructor:</label><br>
+        <input type="text" id="instructor" name="instructor"><br><br>
+        <input type="button" value="Create" onclick="createSchedule()">
+        <input type="button" value="Reset" onclick="resetForm()">
+        
+
+    </form>
+    <table id="scheduleTable">
+        <tr>
+            <th>Subject</th>
+            <th>Day</th>
+            <th>Time</th>
+            <th>Room</th>
+            <th>Instructor</th>
+            <th>Action</th>
+        </tr>
+    </table>
+    <script src="index.js"></script>
+</body>
+</html>
